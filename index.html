@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    @vite('resources/css/app.css')
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://kit.fontawesome.com/386b31f430.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                },
+            }
+        };
+    </script>
+    <style>
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body class="font-poppins">
+    <div class="h-[100px]">
+    </div>
+    <!-- Navbar -->
+    <header class="bg-white fixed top-0 left-0 right-0 z-50 shadow-md">
+        <div class="container mx-auto flex justify-between flex-col items-center  px-4">
+            <!-- Contact Info -->
+            <div class=" text-gray-600 border-b p-3 w-full ">
+                <div class="flex items-center space-x-4 text-sm max-w-6xl mx-auto">
+                    <div class="flex items-center space-x-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
+                            <path fill-rule="evenodd"
+                                d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z"
+                                clip-rule="evenodd" />
+                        </svg>
+
+                        <span>+62821-2344-2328</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
+                            <path
+                                d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" />
+                            <path
+                                d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
+                        </svg>
+
+                        <span>refrigrasiteknikindo@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <div class="flex items-center justify-between w-full max-w-6xl mx-auto px-5 py-[16px]">
+                <div class="flex flex-row items-center space-x-4">
+                    <img src="/img/logo.jpg" alt="" class="w-12 h-12">
+                    <h1 class="text-lg  text-gray-800">PT Refrigerasi Teknik Indo</h1>
+                </div>
+                <nav>
+                    <ul class="flex items-center space-x-6 text-sm text-gray-800 ">
+                        <li>
+                            <a href="#home"
+                                class="hover:text-[#071A71] border-b-[3px] border-transparent hover:border-[#071A71] transition duration-300 px-3 py-7">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#about"
+                                class="hover:text-[#071A71] border-b-[3px] border-transparent hover:border-[#071A71] transition duration-300 px-3 py-7">
+                                Tentang Kami
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#clients"
+                                class="hover:text-[#071A71] border-b-[3px] border-transparent hover:border-[#071A71] transition duration-300 px-3 py-7">
+                                Klien
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#services"
+                                class="hover:text-[#071A71] border-b-[3px] border-transparent hover:border-[#071A71] transition duration-300 px-3 py-7">
+                                Layanan
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#form"
+                                class="hover:text-[#071A71] border-b-[3px] border-transparent hover:border-[#071A71] transition duration-300 px-3 py-7">
+                                Harga Jasa
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contact"
+                                class="hover:text-[#071A71] border-b-[3px] border-transparent hover:border-[#071A71] transition duration-300 px-3 py-7">
+                                Kontak
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+    </header>
+    <!-- Gambar Slider -->
+    <div class="relative w-full h-[600px]">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide relative">
+                    <!-- Gambar -->
+                    <img src="/img/17.jpg" alt="" class="object-cover w-full h-[600px]">
+                    <!-- Teks Overlay -->
+                    <div
+                        class="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-30 text-white">
+                       <!--  <span class="text-blue-500  text-xl">PT. Refrigerasi Teknik Indo</span> -->
+                        <p class="mt-4 font-semibold text-[50px]">Solusi Terbaik <br> Service Pendingin Udara</p>
+                        <span class="max-w-[700px] text-sm mt-3">
+                            perusahaan yang bergerak di bidang instalasi,pemeliharaan, dan perbaikan sistem pendingin
+                            udara (AC) untuk sektor perumahan,komersial, dan industri. 
+                        </span>
+                        <div class="flex flex-row gap-4 mt-5">
+                            <a href="#services"
+                                class="mt-8 px-6 py-3 bg-[#071A71] text-white  hover:bg-white hover:text-[#071A71] transition duration-300">
+                                Layanan Kami
+                            </a>
+                            <a href="">
+                                <button
+                                    class="mt-8 px-6 py-3 bg-transparent text-white border border-white  hover:bg-[#071A71] hover:border-transparent transition duration-300">
+                                    Hubungi Kami
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide relative">
+                    <!-- Gambar -->
+                    <img src="/img/3.jpg" alt="" class="object-cover w-full h-[600px]">
+                    <!-- Teks Overlay -->
+                    <div
+                        class="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-30 text-white">
+                        <h1 class="text-4xl font-semibold">Sudah Lebih dari 5 tahun kami melayani</h1>
+                        <p class="mt-4 text-lg">Kami menyediakan jasa instalasi AC untuk berbagai jenis AC, mulai dari <br>
+                            AC rumah tangga, AC komersial, hingga AC industri.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next "></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+    <!-- Layanan -->
+    <div id="services" class=" py-12">
+        <div class="max-w-7xl mx-auto  gap-8">
+            <!-- Title Section -->
+            <div class="text-center max-w-[700px] mx-auto">
+                <h2 class="  text-blue-500">Our Services</h2>
+                <p class="mt-4 text-2xl text-[#071A71]">Layanan yang kami tawarkan untuk membantu anda
+                    dalam merawat AC anda.</p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8">
+                <!-- Services List -->
+                <div class="grid grid-cols-1 gap-4">
+
+                    <div class="service flex flex-row items-center   p-5 rounded-md bg-[#071A71]  text-white cursor-pointer"
+                        data-img="/img/3.jpg">
+                        <div class="mr-4 text-[35px]  ">
+                            <i class="fa-solid fa-gear"></i>
+                        </div>
+                        <div class="flex flex-col items-left">
+                            <h1 class="text-lg font-semibold">Instalasi AC</h1>
+                            <p class="text-sm mt-1">Kami menyediakan jasa instalasi AC untuk berbagai jenis AC, mulai
+                                dari
+                                AC rumah tangga, AC komersial, hingga AC industri.</p>
+                        </div>
+                    </div>
+                    <div class="service flex flex-row items-center   p-5 rounded-md border border-[#071A71] text-[#071A71]  cursor-pointer"
+                        data-img="/img/10.jpg">
+                        <div class="mr-4 text-[35px]  ">
+                            <i class="fa-solid fa-temperature-arrow-down"></i>
+                        </div>
+                        <div class="flex flex-col items-left">
+                            <h1 class="font-semibold text-lg">Pemeliharaan dan Perawatan AC</h1>
+                            <p class="text-sm mt-1">Kami menyediakan jasa pemeliharaan dan perawatan AC untuk menjaga
+                                performa AC anda tetap optimal.</p>
+                        </div>
+                    </div>
+                    <div class="service flex flex-row items-center   p-5 rounded-md border border-[#071A71] text-[#071A71]  cursor-pointer"
+                        data-img="/img/19.jpg">
+                        <div class="mr-4 text-[35px]  ">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                        </div>
+                        <div class="flex flex-col items-left">
+                            <h1 class="font-semibold text-lg">Perbaikan AC</h1>
+                            <p class="text-sm mt-1">Kami menyediakan jasa perbaikan AC untuk berbagai jenis kerusakan AC
+                                yang anda alami.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Image Display -->
+                <div class="flex flex-col items-center justify-center">
+                    <img id="serviceImage" src="/img/3.jpg" alt=""
+                        class="w-full h-[350px] rounded-md object-cover">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Manipulasi xd -->
+    <div
+        class="bg-gradient-to-tl from-blue-700 to-blue-900 py-10 max-w-7xl mx-auto rounded-lg flex flex-row items-center justify-center gap-8 mt-20">
+        <div class="text-white text-center text-lg">
+            Gimana Udah Tertarik Belum ? Klik untuk
+        </div>
+        <div class="text-center flex flex-row gap-4">
+            <a href="https://wa.me/6282123442328" target="_blank">
+                <button class="bg-white text-[#071A71] px-6 py-3 rounded-lg hover:bg-[#071A71] hover:text-white">
+                    Hubungi Kami
+                </button>
+            </a>
+            <a href="" target="_blank">
+                <button
+                    class=" bg-transparent text-white border border-white px-6 py-3 rounded-lg hover:bg-[#071A71] hover:border-transparent">
+                    Check Harga
+                </button>
+            </a>
+        </div>
+    </div>
+
+    <!-- Kelebihan -->
+    <div class="bg-gray-50 py-12 mt-20">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Title Section -->
+            <div class="text-left">
+                <h2 class="text-4xl  text-[#071A71]">Why Choose <br> PT Refrigerasi Teknik Indo </h2>
+                <p class="mt-4  text-gray-500">Berikut adalah beberapa alasan mengapa anda harus memilih PT
+                    Refrigerasi Teknik Indo sebagai partner servis AC anda.</p>
+
+            </div>
+
+            <!-- Features Grid -->
+            <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 col-span-2">
+                <!-- Feature 1 -->
+                <div class="">
+                    <div
+                        class="flex items-center justify-center h-16 w-16 rounded-full bg-gradient-to-bl from-blue-700 to-blue-900 text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                            class="size-6 ">
+                            <path fill-rule="evenodd"
+                                d="M7.502 6h7.128A3.375 3.375 0 0 1 18 9.375v9.375a3 3 0 0 0 3-3V6.108c0-1.505-1.125-2.811-2.664-2.94a48.972 48.972 0 0 0-.673-.05A3 3 0 0 0 15 1.5h-1.5a3 3 0 0 0-2.663 1.618c-.225.015-.45.032-.673.05C8.662 3.295 7.554 4.542 7.502 6ZM13.5 3A1.5 1.5 0 0 0 12 4.5h4.5A1.5 1.5 0 0 0 15 3h-1.5Z"
+                                clip-rule="evenodd" />
+                            <path fill-rule="evenodd"
+                                d="M3 9.375C3 8.339 3.84 7.5 4.875 7.5h9.75c1.036 0 1.875.84 1.875 1.875v11.25c0 1.035-.84 1.875-1.875 1.875h-9.75A1.875 1.875 0 0 1 3 20.625V9.375Zm9.586 4.594a.75.75 0 0 0-1.172-.938l-2.476 3.096-.908-.907a.75.75 0 0 0-1.06 1.06l1.5 1.5a.75.75 0 0 0 1.116-.062l3-3.75Z"
+                                clip-rule="evenodd" />
+                        </svg>
+
+                    </div>
+                    <h3 class="mt-4 text-xl  text-[#071A71]">Teknisi terlatih dan bersertifikat</h3>
+                    <p class="mt-2 text-sm text-gray-600 ">Kami memiliki Sumber Daya Manusia yang terampil dengan
+                        memberikan Program pelatihan rutin untukmeningkatkan keterampilan.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="">
+                    <div
+                        class="flex items-center justify-center h-16 w-16 rounded-full bg-gradient-to-bl from-blue-700 to-blue-900 text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                            class="size-6">
+                            <path fill-rule="evenodd"
+                                d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 6a.75.75 0 0 0-1.5 0v6c0 .414.336.75.75.75h4.5a.75.75 0 0 0 0-1.5h-3.75V6Z"
+                                clip-rule="evenodd" />
+                        </svg>
+
+                    </div>
+                    <h3 class="mt-4 text-xl  text-[#071A71]">Respon Cepat</h3>
+                    <p class="mt-2 text-sm text-gray-600">Kami akan merespon permintaan servis anda dalam waktu 24
+                        jam setelah permintaan servis diterima.</p>
+                    </p>
+                </div>
+
+                <div class="">
+                    <div
+                        class="flex items-center justify-center h-16 w-16 rounded-full bg-gradient-to-bl from-blue-700 to-blue-900 text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                            class="size-6">
+                            <path
+                                d="M10.464 8.746c.227-.18.497-.311.786-.394v2.795a2.252 2.252 0 0 1-.786-.393c-.394-.313-.546-.681-.546-1.004 0-.323.152-.691.546-1.004ZM12.75 15.662v-2.824c.347.085.664.228.921.421.427.32.579.686.579.991 0 .305-.152.671-.579.991a2.534 2.534 0 0 1-.921.42Z" />
+                            <path fill-rule="evenodd"
+                                d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 6a.75.75 0 0 0-1.5 0v.816a3.836 3.836 0 0 0-1.72.756c-.712.566-1.112 1.35-1.112 2.178 0 .829.4 1.612 1.113 2.178.502.4 1.102.647 1.719.756v2.978a2.536 2.536 0 0 1-.921-.421l-.879-.66a.75.75 0 0 0-.9 1.2l.879.66c.533.4 1.169.645 1.821.75V18a.75.75 0 0 0 1.5 0v-.81a4.124 4.124 0 0 0 1.821-.749c.745-.559 1.179-1.344 1.179-2.191 0-.847-.434-1.632-1.179-2.191a4.122 4.122 0 0 0-1.821-.75V8.354c.29.082.559.213.786.393l.415.33a.75.75 0 0 0 .933-1.175l-.415-.33a3.836 3.836 0 0 0-1.719-.755V6Z"
+                                clip-rule="evenodd" />
+                        </svg>
+
+                    </div>
+                    <h3 class="mt-4 text-xl  text-[#071A71]">Harga Terjangkau</h3>
+                    <p class="mt-2 text-sm text-gray-600 ">Kami menawarkan harga yang terjangkau untuk berbagai
+                        jenis servis AC yang kami tawarkan.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="">
+                    <div
+                        class="flex items-center justify-center h-16 w-16 rounded-full bg-gradient-to-bl from-blue-700 to-blue-900 text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                            class="size-6">
+                            <path fill-rule="evenodd"
+                                d="M12 6.75a5.25 5.25 0 0 1 6.775-5.025.75.75 0 0 1 .313 1.248l-3.32 3.319c.063.475.276.934.641 1.299.365.365.824.578 1.3.64l3.318-3.319a.75.75 0 0 1 1.248.313 5.25 5.25 0 0 1-5.472 6.756c-1.018-.086-1.87.1-2.309.634L7.344 21.3A3.298 3.298 0 1 1 2.7 16.657l8.684-7.151c.533-.44.72-1.291.634-2.309A5.342 5.342 0 0 1 12 6.75ZM4.117 19.125a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75h-.008a.75.75 0 0 1-.75-.75v-.008Z"
+                                clip-rule="evenodd" />
+                            <path
+                                d="m10.076 8.64-2.201-2.2V4.874a.75.75 0 0 0-.364-.643l-3.75-2.25a.75.75 0 0 0-.916.113l-.75.75a.75.75 0 0 0-.113.916l2.25 3.75a.75.75 0 0 0 .643.364h1.564l2.062 2.062 1.575-1.297Z" />
+                            <path fill-rule="evenodd"
+                                d="m12.556 17.329 4.183 4.182a3.375 3.375 0 0 0 4.773-4.773l-3.306-3.305a6.803 6.803 0 0 1-1.53.043c-.394-.034-.682-.006-.867.042a.589.589 0 0 0-.167.063l-3.086 3.748Zm3.414-1.36a.75.75 0 0 1 1.06 0l1.875 1.876a.75.75 0 1 1-1.06 1.06L15.97 17.03a.75.75 0 0 1 0-1.06Z"
+                                clip-rule="evenodd" />
+                        </svg>
+
+                    </div>
+                    <h3 class="mt-4 text-xl  text-[#071A71]">Peralatan lengkap </h3>
+                    <p class="mt-2 text-sm text-gray-600">Kami memiliki peralatan lengkap untuk menangani berbagai
+                        jenis servis AC yang anda butuhkan.</p>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Daftar Client -->
+    <div class="max-w-7xl mx-auto mt-20 gap-8">
+        <!-- Title Section -->
+        <div class="text-center max-w-[700px] mx-auto">
+            <h2 class="  text-blue-500">Our Client</h2>
+            <p class="mt-4 text-2xl text-[#071A71]">Berikut adalah beberapa klien yang telah
+                mempercayakan kebutuhan mereka kepada kami :</p>
+        </div>
+
+        <div class="swiper swiper-container mt-10 md:max-w-3xl lg:max-w-[1200px] w-screen mx-auto">
+            <div class="swiper-wrapper flex items-center">
+                <!-- Angkasa Pura -->
+                <div class="swiper-slide flex flex-col items-center gap-4 p-4 border rounded-lg shadow-lg bg-white">
+                    <img src="/client/angkasapura.jpg" alt="Angkasa Pura" class="w-10 h-10 object-cover rounded-md">
+                    <p class="text-sm font-semibold text-gray-800">PT. ANGKASA PURA</p>
+                </div>
+                <!-- Aoset -->
+                <div class="swiper-slide flex flex-col items-center gap-4 p-4 border rounded-lg shadow-lg bg-white">
+                    <img src="/client/aoset.jpg" alt="Aoset" class="w-10 h-10 object-cover rounded-md">
+                    <p class="text-sm font-semibold text-gray-800">PT. ACSET</p>
+                </div>
+                <!-- Central Capital -->
+                <div class="swiper-slide flex flex-col items-center gap-4 p-4 border rounded-lg shadow-lg bg-white">
+                    <img src="/client/central-capital.jpg" alt="Central Capital"
+                        class="w-10 h-10 object-cover rounded-md">
+                    <p class="text-sm font-semibold text-gray-800">PT. CCV</p>
+                </div>
+                <!-- Dnet -->
+                <div class="swiper-slide flex flex-col items-center gap-4 p-4 border rounded-lg shadow-lg bg-white">
+                    <img src="/client/dnet.jpg" alt="Dnet" class="w-10 h-10 object-cover rounded-md">
+                    <p class="text-sm font-semibold text-gray-800">PT. DNET</p>
+                </div>
+                <!-- SSI -->
+                <div class="swiper-slide flex flex-col items-center gap-4 p-4 border rounded-lg shadow-lg bg-white">
+                    <img src="/client/ssi.jpg" alt="SSI" class="w-10 h-10 object-cover rounded-md">
+                    <p class="text-sm font-semibold text-gray-800">PT. SSI</p>
+                </div>
+                <!-- Wiharta Karya -->
+                <div class="swiper-slide flex flex-col items-center gap-4 p-4 border rounded-lg shadow-lg bg-white">
+                    <img src="/client/wihartakarya.jpg" alt="Wiharta Karya"
+                        class="w-10 h-10 object-cover rounded-md">
+                    <p class="text-sm font-semibold text-gray-800">PT.WIHARTA KARYA AGUNG</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tentang Prusahaan -->
+    <div class=" grid grid-cols-1 lg:grid-cols-2 gap-8 mt-20 max-w-7xl mx-auto ">
+        <div class="flex flex-col items-center justify-center">
+            <img src="/img/18.jpg" alt="" class="w-full h-[400px] object-cover rounded-md">
+        </div>
+        <div class="flex flex-col items-left justify-center">
+            <h2 class="  text-blue-500">About Us</h2>
+            <h2 class="text-4xl  text-[#071A71]">PT. Refrigerasi Teknik Indo</h2>
+
+            <p class="mt-4 text-lg text-gray-600">PT. Refrigerasi Teknik Indo (RTI) adalah perusahaan yang bergerak di
+                bidang instalasi,pemeliharaan, dan perbaikan sistem pendingin udara (AC) untuk sektor
+                perumahan,komersial, dan industri. RTI berkomitmen untuk memberikan layanan berkualitas yangefisien dan
+                ramah lingkungan, dengan fokus pada kepuasan pelanggan dan inovasiteknologi.</p>
+        </div>
+
+    </div>
+
+    <!-- Visi Misi -->
+    <div class=" grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8 max-w-7xl mx-auto">
+        <div class="flex flex-col items-left justify-top">
+            <h2 class="text-2xl  text-[#071A71]">Visi</h2>
+            <p class="mt-4 text-sm text-gray-600">Menjadi perusahaan terkemuka di bidang servis AC yang
+                memberikan layanan terbaik dan inovatif untuk memenuhi kebutuhan pelanggan.</p>
+        </div>
+        <div class="flex flex-col items-left justify-top">
+            <h1 class="text-2xl  text-[#071A71]">Misi</h1>
+            <p class="mt-4 text-sm text-gray-600">1. Memberikan layanan yang berkualitas tinggi dan efisien,untuk
+                memastikan kenyamanan
+                dan kepuasanpelanggan di berbagai sektor. <br> <br>
+                2. Terus berinovasi dalamteknologi HVAC dan sistem pendingin udara yang ramahlingkungan, untuk
+                mendukung keberlanjutan dan efisiensi energi bagi pelanggan.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- Daftar Client -->
+    <div class="max-w-7xl mx-auto mt-20 gap-8">
+        <!-- Title Section -->
+        <div class="text-center max-w-[700px] mx-auto">
+            <h2 class="  text-blue-500">Our Main Mitra</h2>
+            <p class="mt-4 text-2xl text-[#071A71]">Berikut adalah beberapa Mitra Utama kami :</p>
+        </div>
+
+        <div class="swiper swiper-container2 mt-10 md:max-w-3xl lg:max-w-[1200px] w-screen mx-auto">
+            <div class="swiper-wrapper flex items-center">
+                <!-- 1 -->
+                <div class="swiper-slide flex flex-col items-center gap-4 p-4 border rounded-lg shadow-lg bg-white">
+                    <img src="/mitra/aicool.jpg" alt="Angkasa Pura" class="w-10 h-10 object-cover rounded-md">
+                </div>
+                <!-- 2  -->
+                <div class="swiper-slide flex flex-col items-center gap-4 p-4 border rounded-lg shadow-lg bg-white">
+                    <img src="/mitra/carrier.jpg" alt="Aoset" class="w-10 h-10 object-cover rounded-md">
+                </div>
+                <!-- 3  -->
+                <div class="swiper-slide flex flex-col items-center gap-4 p-4 border rounded-lg shadow-lg bg-white">
+                    <img src="/mitra/daikin.jpg" alt="Central Capital" class="w-10 h-10 object-cover rounded-md">
+                </div>
+                <!-- 4  -->
+                <div class="swiper-slide flex flex-col items-center gap-4 p-4 border rounded-lg shadow-lg bg-white">
+                    <img src="/mitra/gree.jpg" alt="Dnet" class="w-10 h-10 object-cover rounded-md">
+                </div>
+                <!-- 5  -->
+                <div class="swiper-slide flex flex-col items-center gap-4 p-4 border rounded-lg shadow-lg bg-white">
+                    <img src="/mitra/lg.jpg" alt="SSI" class="w-10 h-10 object-cover rounded-md">
+                </div>
+                <!--  6 -->
+                <div class="swiper-slide flex flex-col items-center gap-4 p-4 border rounded-lg shadow-lg bg-white">
+                    <img src="/mitra/mcquay.jpg" alt="Wiharta Karya" class="w-10 h-10 object-cover rounded-md">
+                </div>
+                <!-- 7 -->
+                <div class="swiper-slide flex flex-col items-center gap-4 p-4 border rounded-lg shadow-lg bg-white">
+                    <img src="/mitra/midea.jpg" alt="Angkasa Pura" class="w-10 h-10 object-cover rounded-md">
+                </div>
+                <!-- 8  -->
+                <div class="swiper-slide flex flex-col items-center gap-4 p-4 border rounded-lg shadow-lg bg-white">
+                    <img src="/mitra/mitsubishi.jpg" alt="Aoset" class="w-10 h-10 object-cover rounded-md">
+                </div>
+                <!-- 9  -->
+                <div class="swiper-slide flex flex-col items-center gap-4 p-4 border rounded-lg shadow-lg bg-white">
+                    <img src="/mitra/panasonic.jpg" alt="Central Capital" class="w-10 h-10 object-cover rounded-md">
+                </div>
+                <!-- 10  -->
+                <div class="swiper-slide flex flex-col items-center gap-4 p-4 border rounded-lg shadow-lg bg-white">
+                    <img src="/mitra/sharp.jpg" alt="Dnet" class="w-10 h-10 object-cover rounded-md">
+                </div>
+                <!-- 11  -->
+                <div class="swiper-slide flex flex-col items-center gap-4 p-4 border rounded-lg shadow-lg bg-white">
+                    <img src="/mitra/toshiba.jpg" alt="SSI" class="w-10 h-10 object-cover rounded-md">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- List Harga -->
+    <div class="flex flex-col items-center justify-center mt-20 max-w-7xl mx-auto">
+        <!-- Title Section -->
+        <div class="text-center max-w-[700px] mx-auto">
+            <h2 class="  text-blue-500">Our Service Prize</h2>
+            <p class="mt-4 text-2xl text-[#071A71]">Berikut adalah beberapa Harga Jasa yang kami tawarkan</p>
+        </div>
+
+        <!-- Tombol Pilihan Kategori -->
+        <div class="grid grid-cols-6 text-sm mt-6">
+            <div class="text-center flex items-center justify-center bg-[#071A71] text-white p-3 rounded-sm cursor-pointer kategori active"
+                data-kategori="service-cleaning">
+                SERVICE - CLEANING
+            </div>
+            <div class="text-center flex items-center justify-center border p-3 rounded-sm hover:bg-[#071A71] hover:text-white cursor-pointer kategori"
+                data-kategori="tambah-gas">
+                TAMBAH GAS FREON
+            </div>
+            <div class="text-center flex items-center justify-center border p-3 rounded-sm hover:bg-[#071A71] hover:text-white cursor-pointer kategori"
+                data-kategori="isi-gas">
+                ISI GAS FREON
+            </div>
+            <div class="text-center flex items-center justify-center border p-3 rounded-sm hover:bg-[#071A71] hover:text-white cursor-pointer kategori"
+                data-kategori="installasi-relokasi">
+                INSTALLASI/RELOKASI UNIT AC
+            </div>
+            <div class="text-center flex items-center justify-center border p-3 rounded-sm hover:bg-[#071A71] hover:text-white cursor-pointer kategori"
+                data-kategori="repair">
+                JASA REPAIR
+            </div>
+            <div class="text-center flex items-center justify-center border p-3 rounded-sm hover:bg-[#071A71] hover:text-white cursor-pointer kategori"
+                data-kategori="sparepart">
+                MATERIAL SPAREPART
+            </div>
+        </div>
+
+        <!-- Table -->
+        <div>
+            <table class="table-auto mt-8 w-full border-collapse border border-gray-300">
+                <thead>
+                    <tr>
+                        <th class="px-4 py-2 border">No</th>
+                        <th class="px-4 py-2 border">Jenis Pekerjaan</th>
+                        <th class="px-4 py-2 border">Satuan</th>
+                        <th class="px-4 py-2 border">Harga</th>
+                        <th class="px-4 py-2 border">Keterangan</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    <!-- Rows will be dynamically inserted here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Gallery -->
+    <div class="flex flex-col items-center justify-center mt-20 max-w-7xl mx-auto">
+        <!-- Title Section -->
+        <div class="text-center max-w-[700px] mx-auto">
+            <h2 class="  text-blue-500">Gallery PT Refrigerasi Teknik Indo</h2>
+            <p class="mt-4 text-2xl text-[#071A71]">Berikut adalah beberapa gambar dari layanan kami</p>
+        </div>
+        <!-- Gallery Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-8 max-w-[1000px]">
+            <!-- Image 1 -->
+            <div class="gallery-item">
+                <img src="/img/1.jpg" alt="Gallery Image" class="w-full h-[300px] object-cover rounded-md">
+            </div>
+            <!-- Image 2 -->
+            <div class="gallery-item">
+                <img src="/img/2.jpg" alt="Gallery Image" class="w-full h-[300px] object-cover rounded-md">
+            </div>
+            <!-- Image 3 -->
+            <div class="gallery-item">
+                <img src="/img/3.jpg" alt="Gallery Image" class="w-full h-[300px] object-cover rounded-md">
+            </div>
+            <!-- Image 4 -->
+            <div class="gallery-item">
+                <img src="/img/4.jpg" alt="Gallery Image" class="w-full h-[300px] object-cover rounded-md">
+            </div>
+            <!-- Image 5 -->
+            <div class="gallery-item">
+                <img src="/img/5.jpg" alt="Gallery Image" class="w-full h-[300px] object-cover rounded-md">
+            </div>
+            <!-- Image 6 -->
+            <div class="gallery-item">
+                <img src="/img/6.jpg" alt="Gallery Image" class="w-full h-[300px] object-cover rounded-md">
+            </div>
+            <!-- Image 7 -->
+            <div class="gallery-item">
+                <img src="/img/7.jpg" alt="Gallery Image" class="w-full h-[300px] object-cover rounded-md">
+            </div>
+            <!-- Image 8 -->
+            <div class="gallery-item">
+                <img src="/img/8.jpg" alt="Gallery Image" class="w-full h-[300px] object-cover rounded-md">
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="kontak" class=" bg-[#071A71] w-full mt-20 pt-[100px] flex flex-col justify-between">
+        <div
+            class="text-gray-300 text-sm md:max-w-3xl lg:max-w-[1300px] w-screen mx-auto px-10 lg:px-0 h-[300px]  grid grid-cols-1 md:grid-cols-4 gap-10 ">
+
+            <div>
+                <h1 class=" font-semibold text-xl capitalize ">PT refrigerasi teknik indo</h1>
+                <p class=" capitalize tracking-wider mt-8 ">
+                    menyediakan layananservis untuk berbagai jenis AC, mulai dari ACrumah tangga hingga AC industri yang
+                    lebih besar.
+                </p>
+            </div>
+
+            <div class="text-gray-300 ">
+                <h1 class=" font-semibold text-xl ">Kontak</h1>
+                <div class="  tracking-wider mt-8 gap-1 flex flex-col">
+                    <span>Klik Icon Berikut Untuk Menghubungi Kami : </span>
+                </div>
+                <div class="flex flex-row mt-5 justify-center items-center gap-4">
+                    <a href="https://wa.me/6282123442328" target="_blank" class="">
+                        <div
+                            class="flex items-center justify-center rounded-full border w-10 h-10 bg-transparent hover:bg-white hover:text-[#103d67]">
+                            <i class="fab fa-whatsapp text-[20px]"></i>
+                        </div>
+                    </a>
+                    <a href="https://www.facebook.com/RTIserviceAC" target="_blank" class="">
+                        <div
+                            class="flex items-center justify-center rounded-full border w-10 h-10 bg-transparent hover:bg-white hover:text-[#103d67]">
+                            <i class="fab fa-facebook-f text-[18px]"></i>
+                        </div>
+                    </a>
+                    <a href="https://www.instagram.com/pt_refrigrasi_teknik_indo/" target="_blank" class="">
+                        <div
+                            class="flex items-center justify-center rounded-full border w-10 h-10 bg-transparent hover:bg-white hover:text-[#103d67]">
+                            <i class="fab fa-instagram text-[20px]"></i>
+                        </div>
+                    </a>
+                    <a href="#" target="_blank" class="">
+                        <div
+                            class="flex items-center justify-center rounded-full border w-10 h-10 bg-transparent hover:bg-white hover:text-[#103d67]">
+                            <i class="fab fa-twitter text-[20px]"></i>
+                        </div>
+                    </a>
+                    <a href="mailto:refrigrasiteknikindo@gmail.com" target="_blank" class="">
+                        <div
+                            class="flex items-center justify-center rounded-full border w-10 h-10 bg-transparent hover:bg-white hover:text-[#103d67]">
+                            <i class="fa-solid fa-envelope text-[20px]"></i>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+            <div class="text-gray-300 ">
+                <h1 class=" font-semibold text-xl  ">Jam Kerja</h1>
+                <p class="mt-8">
+                    Jika anda membutuhkan bantuan, silahkan hubungi kami pada jam kerja berikut:
+                </p>
+                <ul class="capitalize tracking-wider mt-8 space-y-2">
+                    <li class="grid grid-cols-2">
+                        <span>Senin - Sabtu</span>
+                        <span>: 08.00 - 17.00 WIB</span>
+                    </li>
+                    <li class="grid grid-cols-2">
+                        <span>Minggu</span>
+                        <span>: Libur</span>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="text-gray-300 ">
+                <h1 class=" font-semibold text-xl  ">Alamat Kami</h1>
+                <p class=" capitalize tracking-wider mt-8 mb-4 ">
+                    Jl. Raya Lenteng Agung No.8RT.05 RW 05, Kel. Lenteng Agung, Kec. Jagakarsa.Jakarta Selatan, DKI
+                    Jakarta.
+                </p>
+            </div>
+        </div>
+        <div class="bg-[#0a143d] text-gray-300 text-center    py-4">
+            <span>
+                Copyright &copy; 2025 PT Refrigerasi Teknik Indo
+            </span>
+        </div>
+    </div>
+
+    <!-- List harga -->
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+    <script>
+        // Select all service elements
+        const services = document.querySelectorAll('.service');
+        const image = document.getElementById('serviceImage');
+
+        // Add click event to each service
+        services.forEach(service => {
+            service.addEventListener('click', () => {
+                // Get the image URL from data-img attribute
+                const imgSrc = service.getAttribute('data-img');
+
+                // Update the image source
+                image.src = imgSrc;
+
+                // Update the selected service styles
+                services.forEach(svc => {
+                    svc.classList.remove('bg-[#071A71]', 'text-white');
+                    svc.classList.add('border', 'border-[#071A71]', 'text-[#071A71]');
+                });
+                service.classList.remove('border', 'border-[#071A71]', 'text-[#071A71]');
+                service.classList.add('bg-[#071A71]', 'text-white');
+            });
+        });
+    </script>
+    <script>
+        var swiper = new Swiper(".swiper-container", {
+            slidesPerView: 2, // Default for small screens
+            spaceBetween: 10,
+            dynamicBullets: true,
+            loop: true,
+            autoplay: {
+                delay: 1500,
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 3, // Small screens
+                    spaceBetween: 10,
+                },
+                640: {
+                    slidesPerView: 3, // Medium screens
+                    spaceBetween: 20,
+                },
+                1024: {
+                    slidesPerView: 5, // Large screens
+                    spaceBetween: 30,
+                },
+            },
+        });
+    </script>
+    <script>
+        var swiper = new Swiper(".swiper-container2", {
+            slidesPerView: 2, // Default for small screens
+            spaceBetween: 10,
+            dynamicBullets: true,
+            loop: true,
+            autoplay: {
+                delay: 1500,
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 2, // Small screens
+                    spaceBetween: 10,
+                },
+                640: {
+                    slidesPerView: 2, // Medium screens
+                    spaceBetween: 20,
+                },
+                1024: {
+                    slidesPerView: 6, // Large screens
+                    spaceBetween: 30,
+                },
+            },
+        });
+    </script>
+    <script>
+        // Data tabel disimpan di JavaScript
+        const dataKategori = {
+            "service-cleaning": [{
+                    no: 1,
+                    jenis: "Service / Cleaning AC Split",
+                    satuan: "PK",
+                    harga: "Rp. 85.000,00",
+                    keterangan: "Khusus AC Standart"
+                },
+                {
+                    no: 2,
+                    jenis: "Service AC Cassette",
+                    satuan: "Unit",
+                    harga: "Rp. 350.000,00",
+                    keterangan: "2PK - 5PK"
+                },
+                {
+                    no: 3,
+                    jenis: "Service / Cleaning AC Standing",
+                    satuan: "PK",
+                    harga: "Rp. 175.000,00",
+                    keterangan: "Khusus AC Standart"
+                },
+                {
+                    no: 4,
+                    jenis: "Service / Cleaning AC Ceilling",
+                    satuan: "PK",
+                    harga: "Rp. 250.000,00",
+                    keterangan: "Khusus AC Standart"
+                },
+                {
+                    no: 5,
+                    jenis: "Service / Cleaning AC Split Inverter",
+                    satuan: "Unit",
+                    harga: "Rp. 150.000,00",
+                    keterangan: "Khusus AC Split"
+                }
+            ],
+            "tambah-gas": [{
+                    no: 1,
+                    jenis: "Refrigerant R22",
+                    satuan: "PK",
+                    harga: "Rp. 225.000,00",
+                    keterangan: "Semua jenis AC"
+                },
+                {
+                    no: 2,
+                    jenis: "Refrigerant R32",
+                    satuan: "PK",
+                    harga: "Rp. 275.000,00",
+                    keterangan: "Semua jenis AC"
+                },
+                {
+                    no: 3,
+                    jenis: "Refrigerant R410A",
+                    satuan: "PK",
+                    harga: "Rp. 275.000,00",
+                    keterangan: "Semua jenis AC"
+                }
+            ],
+            "isi-gas": [{
+                    no: 1,
+                    jenis: "Refrigerant R22",
+                    satuan: "PK",
+                    harga: "Rp. 275.000,00",
+                    keterangan: "Semua jenis AC"
+                },
+                {
+                    no: 2,
+                    jenis: "Refrigerant R32",
+                    satuan: "PK",
+                    harga: "Rp. 350.000,00",
+                    keterangan: "Semua jenis AC"
+                },
+                {
+                    no: 3,
+                    jenis: "Refrigerant R410A",
+                    satuan: "PK",
+                    harga: "Rp. 350.000,00",
+                    keterangan: "Semua jenis AC"
+                }
+            ],
+            "installasi-relokasi": [{
+                no: 1,
+                jenis: "Jasa Pasang AC Split 0.5PK - 1PK",
+                satuan: "Unit",
+                harga: "Rp. 350.000,00",
+                keterangan: "Standart installasi 3 Meter Non Material"
+            }, {
+                no: 2,
+                jenis: "Jasa Pasang AC Split 1.5PK - 2PK",
+                satuan: "Unit",
+                harga: "Rp. 550.000,00",
+                keterangan: "Standart installasi 3 Meter Non Material"
+            }, {
+                no: 3,
+                jenis: "Jasa Pasang AC Cassete",
+                satuan: "PK",
+                harga: "Rp. 550.000,00",
+                keterangan: "Standart installasi 3 Meter Non Material"
+            }, {
+                no: 4,
+                jenis: "Jasa Pasang AC Central",
+                satuan: "PK",
+                harga: "Rp. 350.000,00",
+                keterangan: "Standart installasi 3 Meter Non Material"
+            }, {
+                no: 5,
+                jenis: "Bongkar AC Split",
+                satuan: "PK",
+                harga: "Rp. 150.000,00",
+                keterangan: "Diluar Penarikan Pipa"
+            }, {
+                no: 6,
+                jenis: "Bongkar AC Cassete",
+                satuan: "PK",
+                harga: "Rp. 350.000,00",
+                keterangan: "Diluar Penarikan Pipa"
+            }, {
+                no: 7,
+                jenis: "Bongkar AC Central/ Ducting",
+                satuan: "PK",
+                harga: "Rp. 250.000,00",
+                keterangan: "Diluar Penarikan Pipa"
+            }, {
+                no: 8,
+                jenis: "Relokasi AC Split",
+                satuan: "PK",
+                harga: "Rp. 500.000,00",
+                keterangan: "Non Material"
+            }, {
+                no: 9,
+                jenis: "Jasa Vacuum",
+                satuan: "PK",
+                harga: "Rp. 150.000,00",
+                keterangan: "Semua Jenis Unit"
+            }],
+            "repair": [{
+                no: 1,
+                jenis: "Flushing/ Perbaikan Bocor Air",
+                satuan: "Unit",
+                harga: "Rp. 125.000,00",
+                keterangan: "Khusus AC Split 0.5PK - 2PK"
+            }, {
+                no: 2,
+                jenis: "Overhoul / Service Besar",
+                satuan: "PK",
+                harga: "Rp. 350.000,00",
+                keterangan: "Semua Jenis Unit"
+            }, {
+                no: 3,
+                jenis: "Pengelasan Pipa",
+                satuan: "Titik",
+                harga: "Rp. 175.000,00",
+                keterangan: "Ukuran 1/4 - 5 / 8 ",
+            }, {
+                no: 4,
+                jenis: "Pembobokan",
+                satuan: "Meter",
+                harga: "Rp. 60.000,00",
+                keterangan: ""
+            }, {
+                no: 5,
+                jenis: "Survey / Cek AC Tanpa Tindakan",
+                satuan: "PK",
+                harga: "Rp. 65.000,00",
+                keterangan: "Semua Jenis Unit"
+            }, {
+                no: 6,
+                jenis: "Harga Repair lainnya hubungi kami",
+                satuan: "",
+                harga: "",
+                keterangan: ""
+            }],
+            "sparepart": [{
+                    no: 1,
+                    jenis: "Capasitor 20Mf - 30 Mf + Jasa",
+                    satuan: "Lot",
+                    harga: "Rp. 450.000,00",
+                    keterangan: ""
+                },
+                {
+                    no: 2,
+                    jenis: "Capasitor 35Mf - 40 Mf+ Jasa",
+                    satuan: "Lot",
+                    harga: "Rp. 525.000,00",
+                    keterangan: ""
+                },
+                {
+                    no: 3,
+                    jenis: "Capasitor 45Mf - 60 Mf+ Jasa",
+                    satuan: "Lot",
+                    harga: "Rp. 675.000,00",
+                    keterangan: ""
+                },
+                {
+                    no: 4,
+                    jenis: "Capasitor Fan + Jasa",
+                    satuan: "Lot",
+                    harga: "Rp. 250.000,00",
+                    keterangan: ""
+                }
+            ]
+        };
+
+        // Function to populate table
+        function populateTable(data) {
+            const tableBody = document.getElementById('table-body');
+            tableBody.innerHTML = ''; // Clear previous rows
+            data.forEach(row => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                <td class="border px-4 py-2">${row.no}</td>
+                <td class="border px-4 py-2">${row.jenis}</td>
+                <td class="border px-4 py-2">${row.satuan}</td>
+                <td class="border px-4 py-2">${row.harga}</td>
+                <td class="border px-4 py-2">${row.keterangan}</td>
+            `;
+                tableBody.appendChild(tr);
+            });
+        }
+
+        // Function to update active button
+        function updateActiveButton(button) {
+            document.querySelectorAll('.kategori').forEach(btn => btn.classList.remove('active', 'bg-[#071A71]',
+                'text-white'));
+            button.classList.add('active', 'bg-[#071A71]', 'text-white');
+        }
+
+        // Add event listeners to buttons
+        document.querySelectorAll('.kategori').forEach(button => {
+            button.addEventListener('click', () => {
+                const kategori = button.getAttribute('data-kategori'); // Get kategori from data attribute
+                const data = dataKategori[kategori] || []; // Fetch data for selected kategori
+                populateTable(data); // Populate table with new data
+                updateActiveButton(button); // Update active button style
+            });
+        });
+
+        // Initial load: display default data
+        const defaultKategori = "service-cleaning";
+        const defaultButton = document.querySelector(`.kategori[data-kategori="${defaultKategori}"]`);
+        populateTable(dataKategori[defaultKategori]);
+        updateActiveButton(defaultButton);
+    </script>
+</body>
+
+</html>
